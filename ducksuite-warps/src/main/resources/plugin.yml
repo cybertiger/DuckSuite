@@ -1,0 +1,72 @@
+name: DuckSuiteWarps
+main: net.cubespace.geSuitWarps.geSuitWarps
+version: ${project.version}b-${build.number}
+description: Part of the DuckSuite this plugin allows users to warp to certain points.
+author: geNAZt, CyberTiger
+depend: [DuckSuiteTeleports]
+commands:
+    warps:
+        description: Shows a list of available warps.
+        aliases: [warplist]
+        permission: ducksuite.warps.command.warps
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>
+    warp:
+        description: Warps a player to a specific warp.
+        aliases: [warpto]
+        permission: ducksuite.warps.command.warp
+        permission-message: §cYou do not have permission for this command
+        usage: /<command> (warp name)
+    setwarp:
+        description: Sets a warps at the players location.
+        permission: ducksuite.warps.command.setwarp
+        permission-message: §cYou do not have permission for this command
+        usage: |
+            /<command> - sets a warp for the current server
+            /<command> (hidden true/false) - sets a hidden warp
+            /<command> (hidden) (global true/false) - sets a global warp
+        aliases: [createwarp]
+    delwarp:
+        description: Used to delete a specific warp
+        permission: ducksuite.warps.command.delwarp
+        permission-message: §cYou do not have permission for this command
+        usage: /<command> (warp name)
+        aliases: [deletewarp, removewarp]
+        
+permissions:
+    ducksuite.warps.*:
+        description: Gives access to all DuckSuiteWarps commands
+        default: op
+        children:
+            ducksuite.warps.admin: true
+    ducksuite.warps.admin:
+        description: Gives access to all DuckSuiteWarps admin commands
+        children:
+            ducksuite.warps.user: true
+            ducksuite.warps.command.setwarp: true
+            ducksuite.warps.command.delwarp: true
+            ducksuite.warps.list.hidden: true
+            ducksuite.warps.warp.*: true
+            ducksuite.warps.bypass: true
+            ducksuite.warps.command.warp.other: true
+    ducksuite.warps.user:
+        description: Gives access to all DuckSuiteWarps user commands
+        children:
+            ducksuite.warps.command.warps: true
+            ducksuite.warps.command.warp: true
+            ducksuite.warps.list.server: true
+            ducksuite.warps.list.global: true
+    ducksuite.warps.list.hidden:
+        description: Displays all hidden warps to the user
+    ducksuite.warps.list.server:
+        description: Displays all server warps to the user
+    ducksuite.warps.list.global:
+        description: Displays all global warps to the user
+    ducksuite.warps.warp.*:
+        description: Allows access to all warps
+    ducksuite.warps.warp.<warpname>:
+        description: "allows access to <warpname>"
+    ducksuite.warps.bypass:
+        description: Allows players to user perserver warps cross server
+    ducksuite.warps.command.warp.other:
+        description: Allows players to warp other players

@@ -1,0 +1,109 @@
+name: DuckSuiteTeleports
+main : org.cyberiantiger.minecraft.ducksuite.teleports.DuckSuiteTeleports
+version: ${project.version}b-${build.number}
+description: Part of the DuckSuite this plugin allows users to teleport to each other.
+author: geNAZt, CyberTiger
+commands:
+    tp:
+        description: Teleports a player to another player or location
+        aliases: [teleport]
+        permission: ducksuite.teleports.command.tp
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command>  (player)
+               /<command>  (player) (player)
+               /<command>  (x) (y) (z) [world]
+               /<command>  (player) (x) (y) (z) [world]
+               /<command>  (server) (world) (x) (y) (z)
+    tphere:
+        description: Teleports a player to you
+        aliases: [teleporthere,tptome]
+        permission: ducksuite.teleports.command.tphere
+        permission-message: §cYou do not have permission for this command
+        usage: /<command> (player)
+    tpahere:
+        description: Requests a player teleport to you
+        aliases: [teleportaskhere]
+        permission: ducksuite.teleports.command.tpahere
+        permission-message: §cYou do not have permission for this command
+        usage: /<command> (player)
+    tpall:
+        description: Requests all players teleport to you
+        aliases: [teleportall]
+        permission: ducksuite.teleports.command.tpall
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command>
+               /<command> (player)
+    tpa:
+        description: Sends a teleport request to a player
+        aliases: [tpask,teleportask,tpto]
+        permission: ducksuite.teleports.command.tpa
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>  (player)
+    tpaccept:
+        description: Accepts a players teleport request
+        aliases: [teleportaccept,tpyes]
+        permission: ducksuite.teleports.command.tpaccept
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>
+    tpdeny:
+        description: Denies a teleport request
+        aliases: [teleportdeny,tpno]
+        permission: ducksuite.teleports.command.tpdeny
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>
+    back:
+        description: Sends you back to your last death or teleport location
+        permission: ducksuite.teleports.command.back
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>
+    tptoggle:
+        description: Toggles the receiving of tp requests
+        permission: ducksuite.teleports.command.tptoggle
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>
+
+permissions:
+    ducksuite.teleports.*:
+        description: Gives access to all DuckSuiteTeleports commands
+        default: op
+        children:
+            ducksuite.teleports.admin: true
+    ducksuite.teleports.admin:
+        description: Gives access to all DuckSuiteTeleports admin commands
+        children:
+            ducksuite.teleports.vip: true
+            ducksuite.teleports.command.tp: true
+            ducksuite.teleports.command.tphere: true
+            ducksuite.teleports.command.tpall: true
+            ducksuite.teleports.tp.silent: true
+            ducksuite.teleports.tp.bypass: true
+    ducksuite.teleports.vip:
+        decsription: Gives access to all DuckSuiteTeleports vip commands
+        children:
+            ducksuite.teleports.command.tptoggle: true
+            ducksuite.teleports.back.*: true
+            ducksuite.teleports.user: true
+    ducksuite.teleports.user:
+        description: Gives access to all DuckSuiteTeleports user commands
+        children:
+            ducksuite.teleports.command.tpahere: true
+            ducksuite.teleports.command.tpa: true
+            ducksuite.teleports.command.tpaccept: true
+            ducksuite.teleports.command.tpdeny: true
+    ducksuite.teleports.back.*:
+        description: Gives full access to the back command
+        children:
+            ducksuite.teleports.command.back: true
+            ducksuite.teleports.back.death: true
+            ducksuite.teleports.back.teleport: true
+    ducksuite.teleports.back.death:
+        description: Gives access to /back for death points
+    ducksuite.teleports.back.teleport:
+        description: Gives access to /back for teleports
+    ducksuite.teleports.tp.silent:
+        description: Does not send a teleport message to the player you teleported to
+    ducksuite.teleports.tp.bypass:
+        description: Ability to bypass the tptoggle using /tp and this permission
+        

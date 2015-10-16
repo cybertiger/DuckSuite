@@ -1,0 +1,43 @@
+name: DuckSuitePortals
+main : org.cyberiantiger.minecraft.ducksuite.portals.DuckSuitePortals
+version: ${project.version}b-${build.number}
+description: Part of the DuckSuite this plugin allows users to use portals to move around the server.
+author: geNAZt, CyberTiger
+depend: [WorldEdit, DuckSuiteTeleports]
+commands:
+    setportal:
+        description: Creates a portal to a destination
+        aliases: [createportal, makeportal, sportal]
+        usage: Error use /setportal (portal name) (type) (destination) *(filltype)
+        permission: ducksuite.portals.command.setportal
+        permission-message: §cYou do not have permission for this command
+    delportal:
+        description: Deletes a specific portal
+        aliases: [deleteportal, dportal, removeportal]
+        usage: Error use /delportal (portal name)
+        permission: ducksuite.portals.command.delportal
+        permission-message: §cYou do not have permission for this command
+    portals:
+        description: Gives a list of portals to the player
+        aliases: [portalslist, portallist, listportals]
+        permission: ducksuite.portals.command.portals
+        permission-message: §cYou do not have permission for this command
+permissions:
+    ducksuite.portals.*:
+        description: Gives access to all DuckSuitePortals commands
+        default: op
+        children:
+            ducksuite.portals.admin: true
+    ducksuite.portals.admin:
+        description: Gives access to all DuckSuitePortals admin commands
+        children:
+            ducksuite.portals.user: true
+            ducksuite.portals.command.portals: true
+            ducksuite.portals.command.delportal: true
+            ducksuite.portals.command.setportal: true
+    ducksuite.portals.user:
+        description: Gives access to all DuckSuitePortals user commands
+        children:
+            ducksuite.portals.portal.*: true
+    ducksuite.portals.portal.*:
+        description: Gives access to all portals

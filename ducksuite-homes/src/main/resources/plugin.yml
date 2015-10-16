@@ -1,0 +1,65 @@
+name: DuckSuiteHomes
+main : org.cyberiantiger.minecraft.ducksuite.homes.DuckSuiteHomes
+version: ${project.version}b-${build.number}
+description: Part of the DuckSuite this plugin allows users to set homes in each server.
+author: geNAZt, CyberTiger
+depend: [DuckSuiteTeleports]
+commands:
+    sethome:
+        description: Sets the players home location.
+        usage: |
+               /<command>
+               /<command> (home name)
+        permission: ducksuite.homes.commands.sethome
+        permission-message: §cYou do not have permission for this command
+    delhome:
+        description: Deletes a players home.
+        usage: |
+               /<command>
+               /<command>(home name)
+        permission: ducksuite.homes.commands.delhome
+        permission-message: §cYou do not have permission for this command
+    home:
+        description: Teleports you home
+        usage: |
+                /<command>
+                /<command> (home name)
+        permission: ducksuite.homes.commands.home
+        permission-message: §cYou do not have permission for this command
+    homes:
+        description: Lists all of your homes
+        usage: /<command>
+        permission: ducksuite.homes.commands.homes
+        permission-message: §cYou do not have permission for this command      
+    importhomes:
+        description: imports homes from your essentials data
+        usage: /<command>
+        permission: ducksuite.homes.commands.importhomes
+        permission-message: §cYou do not have permission for this command
+permissions:
+    ducksuite.homes.*:
+        description: Gives access to all home commands
+        default: op
+        children:
+            ducksuite.homes.admin: true
+    ducksuite.homes.admin:
+        description: Gives access to all ducksuite homes commands
+        children:
+            ducksuite.homes.commands.importhomes: true
+            ducksuite.homes.user: true
+    ducksuite.homes.user:
+        description: Gives access to all ducksuite homes user commands
+        children:
+            ducksuite.homes.commands.sethome: true
+            ducksuite.homes.commands.delhome: true
+            ducksuite.homes.commands.homes: true
+            ducksuite.homes.commands.home: true
+    ducksuite.homes.limits.*:
+        decription: Gives maximum home limits for both global and server
+        children:
+            ducksuite.homes.limits.server.*: true
+            ducksuite.homes.limits.global.*: true
+    ducksuite.homes.limits.server.*:
+        description: Gives maximum homes allowed for each server
+    ducksuite.homes.limits.global.*:
+        description: Gives maximum homes allowed for the whole proxy

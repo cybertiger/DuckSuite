@@ -1,0 +1,102 @@
+name: DuckSuiteBans
+main : org.cyberiantiger.minecraft.ducksuite.bans.DuckSuiteBans
+version: ${project.version}b-${build.number}
+description: Part of the DuckSuite this plugin allows moderators to ban and kick players
+author: geNAZt, CyberTiger
+commands:
+    ban:
+        description: Bans a player from the proxy
+        aliases: [banplayer]
+        permission: ducksuite.bans.command.ban
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command> (player)
+               /<command> (player) (message)
+    checkban:
+        description: Gets info about a players ban
+        aliases: [lookupban,baninfo]
+        permission: ducksuite.bans.command.checkban
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>  (player)
+    banhistory:
+        description: Gets the ban history of a player
+        aliases: [bhistory]
+        permission: ducksuite.bans.command.banhistory
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>  (player)
+    ipban:
+        description: Bans an IP from the proxy
+        aliases: [banip]
+        permission: ducksuite.bans.command.ipban
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command>  (player)
+               /<command> (ip)
+               /<command> (ip/player) (message)
+    kick:
+        description: Kick a player from the proxy
+        aliases: [kickplayer, playerkick, kickp,pkick]
+        permission: ducksuite.bans.command.kick
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command>  (player)
+               /<command> (player) (message)
+    kickall:
+        description: Kicks everyone from the proxy
+        aliases: [kicka]
+        permission: ducksuite.bans.command.kickall
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command>
+               /<command>  (message)
+    reloadbans:
+        description: Reloads the bans config
+        aliases: [bansreload, reloadban, banreload]
+        permission: ducksuite.bans.command.reload
+        permission-message: §cYou do not have permission for this command
+        usage: /<command>
+    tempban:
+        description: Temporarily bans a player from the proxy
+        aliases: [tban, bant, bantemp]
+        permission: ducksuite.bans.command.tempban
+        permission-message: §cYou do not have permission for this command
+        usage: |
+               /<command> (player) (time) (reason)
+               /<command> (player) (time) (reason)        
+               Example: /command bob 2d5h building things
+               Valid time units: s (seconds), m (minutes),
+               h (hours), d (days) and w (weeks)
+    unban:
+        description: Unbans a player from the proxy
+        aliases: [uban, removeban, pardon]
+        permission: ducksuite.bans.command.ban
+        permission-message: §cYou do not have permission for this command
+        usage: /<command> (player)
+    unipban:
+        description: Unbans an IP from the proxy
+        aliases: [ipunban, unbanip, ipsafe, safeip]
+        permission: ducksuite.bans.command.ipban
+        permission-message: §cYou do not have permission for this command
+        usage: /<command> (ip)
+
+permissions:
+    ducksuite.bans.*:
+        description: Gives access to all bans commands
+        default: op
+        children:
+            ducksuite.chat.admin: true
+    ducksuite.bans.admin:
+        description: Gives access to all bans admin commands
+        children:
+            ducksuite.bans.command.kickall: true
+            ducksuite.bans.command.ipban: true
+            ducksuite.bans.command.reload: true
+            ducksuite.bans.mod: true
+    ducksuite.bans.mod:
+        description: Gives access to all bans mod commands
+        children:
+            ducksuite.bans.command.ban: true
+            ducksuite.bans.command.checkban: true
+            ducksuite.bans.command.banhistory: true
+            ducksuite.bans.command.kick: true
+            ducksuite.bans.command.tempban: true
