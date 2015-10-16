@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author geNAZt (fabian.fassbender42@googlemail.com)
  */
 public class TeleportToPlayer {
-    public static String OUTGOING_CHANNEL = "DuckSuiteTeleport";
+    public static String OUTGOING_CHANNEL = "DuckSuiteTeleports";
 
     public static void execute(GSPlayer player, GSPlayer target) {
         if (!player.getServer().equals(target.getServer())) {

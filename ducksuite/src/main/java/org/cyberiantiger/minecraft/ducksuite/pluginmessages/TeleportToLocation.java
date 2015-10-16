@@ -15,7 +15,7 @@ import java.io.IOException;
 public class TeleportToLocation
 {
 
-    public static String OUTGOING_CHANNEL = "DuckSuiteTeleport";
+    public static String OUTGOING_CHANNEL = "DuckSuiteTeleports";
 
     public static void execute(GSPlayer player, Location location)
     {

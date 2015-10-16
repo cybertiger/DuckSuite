@@ -40,9 +40,9 @@ public class DuckSuiteTeleports extends JavaPlugin {
 
     private void registerChannels() {
         Bukkit.getMessenger().registerIncomingPluginChannel(this,
-                "DuckSuiteTeleport", new TeleportsMessageListener());
+                "DuckSuiteTeleports", new TeleportsMessageListener());
         Bukkit.getMessenger().registerOutgoingPluginChannel(this,
-                "DuckSuiteTeleport");
+                "DuckSuiteTeleports");
     }
 
     private void registerListeners() {

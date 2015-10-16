@@ -64,7 +64,7 @@ public class DuckSuite extends Plugin
 
     private void registerListeners()
     {
-        getProxy().registerChannel("DuckSuiteTeleport");       // Teleport out/in
+        getProxy().registerChannel("DuckSuiteTeleports");       // Teleport out/in
         getProxy().registerChannel("DuckSuiteSpawns");         // Spawns out/in
         getProxy().registerChannel("DuckSuiteBans");           // Bans in
         getProxy().registerChannel("DuckSuitePortals");        // Portals out/in

@@ -27,7 +27,7 @@ public class PluginMessageTask extends BukkitRunnable {
             return;
         }
         Player p = players.iterator().next();
-        p.sendPluginMessage( DuckSuiteTeleports.instance, "DuckSuiteTeleport", bytes.toByteArray() );
+        p.sendPluginMessage( DuckSuiteTeleports.instance, "DuckSuiteTeleports", bytes.toByteArray() );
     }
 
 }

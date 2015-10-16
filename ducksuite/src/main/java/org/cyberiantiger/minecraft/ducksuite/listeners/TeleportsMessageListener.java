@@ -25,7 +25,7 @@ public class TeleportsMessageListener implements Listener {
         }
         if (!(event.getSender() instanceof Server))
             return;
-        if (!event.getTag().equalsIgnoreCase("DuckSuiteTeleport")) {
+        if (!event.getTag().equalsIgnoreCase("DuckSuiteTeleports")) {
             return;
         }
 
