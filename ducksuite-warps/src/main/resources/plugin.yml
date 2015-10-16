@@ -1,5 +1,5 @@
 name: DuckSuiteWarps
-main: net.cubespace.geSuitWarps.geSuitWarps
+main: org.cyberiantiger.minecraft.ducksuite.warps.DuckSuiteWarps
 version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows users to warp to certain points.
 author: geNAZt, CyberTiger
