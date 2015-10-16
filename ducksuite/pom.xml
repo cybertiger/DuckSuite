@@ -21,7 +21,7 @@
         <dependency>
             <groupId>net.cubespace</groupId>
             <artifactId>Yamler-Core</artifactId>
-            <version>2.2.3-SNAPSHOT</version>
+            <version>2.2.3-cyberiantiger-1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
