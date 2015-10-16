@@ -23,7 +23,8 @@
         <include>org.cyberiantiger.minecraft.ducksuite:ducksuite-warps</include>
       </includes>
       <binaries>
-        <outputDirectory>modules/maven-assembly-plugin</outputDirectory>
+        <includeDependencies>false</includeDependencies>
+        <outputDirectory></outputDirectory>
         <unpack>false</unpack>
       </binaries>
     </moduleSet>
