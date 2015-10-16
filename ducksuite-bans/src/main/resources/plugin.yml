@@ -1,6 +1,6 @@
 name: DuckSuiteBans
 main : org.cyberiantiger.minecraft.ducksuite.bans.DuckSuiteBans
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows moderators to ban and kick players
 author: geNAZt, CyberTiger
 commands:

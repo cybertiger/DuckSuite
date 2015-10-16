@@ -1,6 +1,6 @@
 name: DuckSuiteTeleports
 main : org.cyberiantiger.minecraft.ducksuite.teleports.DuckSuiteTeleports
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows users to teleport to each other.
 author: geNAZt, CyberTiger
 commands:

@@ -1,6 +1,6 @@
 name: DuckSuiteWarps
 main: net.cubespace.geSuitWarps.geSuitWarps
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows users to warp to certain points.
 author: geNAZt, CyberTiger
 depend: [DuckSuiteTeleports]

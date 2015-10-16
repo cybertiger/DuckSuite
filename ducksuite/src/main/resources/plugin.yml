@@ -1,4 +1,4 @@
 name: DuckSuite
 main : org.cyberiantiger.minecraft.ducksuite.DuckSuite
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 author: geNAZt, CyberTiger

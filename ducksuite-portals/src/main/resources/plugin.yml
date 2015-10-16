@@ -1,6 +1,6 @@
 name: DuckSuitePortals
 main : org.cyberiantiger.minecraft.ducksuite.portals.DuckSuitePortals
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows users to use portals to move around the server.
 author: geNAZt, CyberTiger
 depend: [WorldEdit, DuckSuiteTeleports]

@@ -1,6 +1,6 @@
 name: DuckSuiteSpawns
 main : org.cyberiantiger.minecraft.ducksuite.spawn.DuckSuiteSpawns
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows users to set a proxy wide spawn
 author: geNAZt, CyberTiger
 depend: [DuckSuiteTeleports]

@@ -1,6 +1,6 @@
 name: DuckSuiteHomes
 main : org.cyberiantiger.minecraft.ducksuite.homes.DuckSuiteHomes
-version: ${project.version}b-${build.number}
+version: ${project.version}b-${project.build.number}
 description: Part of the DuckSuite this plugin allows users to set homes in each server.
 author: geNAZt, CyberTiger
 depend: [DuckSuiteTeleports]
