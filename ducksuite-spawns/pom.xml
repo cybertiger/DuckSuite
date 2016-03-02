@@ -3,12 +3,12 @@
 
     <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
     <artifactId>ducksuite-spawns</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <parent>
         <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
         <artifactId>ducksuite-parent</artifactId>
-        <version>1.0</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
 
     <dependencies>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-teleports</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
