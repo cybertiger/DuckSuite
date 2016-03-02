@@ -3,49 +3,49 @@
 
     <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
     <artifactId>ducksuite-all</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
         <artifactId>ducksuite-parent</artifactId>
-        <version>1.0</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
 
     <dependencies>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-bans</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-homes</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-portals</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-spawns</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-teleports</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.cyberiantiger.minecraft.ducksuite</groupId>
             <artifactId>ducksuite-warps</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
